@@ -1,0 +1,8 @@
+module controller
+typeinfo appcontroller.qmltypes
+prefer :/qt/qml/controller/
+Main 254.0 Main.qml
+Sidebar 254.0 Sidebar.qml
+Workspace 254.0 Workspace.qml
+depends QtQuick
+

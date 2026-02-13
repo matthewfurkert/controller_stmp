@@ -1,0 +1,13 @@
+<RCC>
+  <qresource prefix="/qt/qml/controller/">
+    <file alias="assets/BrushedMetal.jpg">C:/Users/matthew/Documents/QT/controller/assets/BrushedMetal.jpg</file>
+    <file alias="assets/cool.svg">C:/Users/matthew/Documents/QT/controller/assets/cool.svg</file>
+    <file alias="assets/fan_fill.svg">C:/Users/matthew/Documents/QT/controller/assets/fan_fill.svg</file>
+    <file alias="assets/fan_off.svg">C:/Users/matthew/Documents/QT/controller/assets/fan_off.svg</file>
+    <file alias="assets/fan_outline.svg">C:/Users/matthew/Documents/QT/controller/assets/fan_outline.svg</file>
+    <file alias="assets/heat.svg">C:/Users/matthew/Documents/QT/controller/assets/heat.svg</file>
+    <file alias="fonts/Prisma.ttf">C:/Users/matthew/Documents/QT/controller/fonts/Prisma.ttf</file>
+    <file alias="fonts/RussoOne-Regular.ttf">C:/Users/matthew/Documents/QT/controller/fonts/RussoOne-Regular.ttf</file>
+  </qresource>
+</RCC>
+

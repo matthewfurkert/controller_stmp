@@ -1,0 +1,8 @@
+<RCC>
+  <qresource prefix="/qt/qml/controller/">
+    <file alias="Main.qml">C:/Users/matthew/Documents/QT/controller/Main.qml</file>
+    <file alias="Sidebar.qml">C:/Users/matthew/Documents/QT/controller/Sidebar.qml</file>
+    <file alias="Workspace.qml">C:/Users/matthew/Documents/QT/controller/Workspace.qml</file>
+  </qresource>
+</RCC>
+
