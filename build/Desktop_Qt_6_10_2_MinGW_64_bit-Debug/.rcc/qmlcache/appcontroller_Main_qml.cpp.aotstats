@@ -7,18 +7,66 @@
                     "entries": [
                         {
                             "codegenResult": 0,
-                            "column": 21,
-                            "durationMicroseconds": 0,
-                            "functionName": "source",
-                            "line": 14,
+                            "column": 41,
+                            "durationMicroseconds": 1000,
+                            "functionName": "embeddedDev",
+                            "line": 7,
                             "message": ""
                         },
                         {
                             "codegenResult": 0,
-                            "column": 23,
+                            "column": 12,
                             "durationMicroseconds": 0,
-                            "functionName": "fill",
-                            "line": 19,
+                            "functionName": "width",
+                            "line": 10,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 13,
+                            "durationMicroseconds": 0,
+                            "functionName": "height",
+                            "line": 11,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 17,
+                            "durationMicroseconds": 0,
+                            "functionName": "source",
+                            "line": 17,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 16,
+                            "durationMicroseconds": 0,
+                            "functionName": "width",
+                            "line": 22,
+                            "message": "Cannot access value for name embeddedDev"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 17,
+                            "durationMicroseconds": 0,
+                            "functionName": "height",
+                            "line": 23,
+                            "message": "Cannot access value for name embeddedDev"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 19,
+                            "durationMicroseconds": 0,
+                            "functionName": "rotation",
+                            "line": 24,
+                            "message": "Cannot access value for name embeddedDev"
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 27,
+                            "durationMicroseconds": 0,
+                            "functionName": "centerIn",
+                            "line": 21,
                             "message": ""
                         },
                         {
@@ -26,7 +74,7 @@
                             "column": 22,
                             "durationMicroseconds": 0,
                             "functionName": "family",
-                            "line": 20,
+                            "line": 27,
                             "message": ""
                         },
                         {
@@ -34,7 +82,7 @@
                             "column": 27,
                             "durationMicroseconds": 0,
                             "functionName": "fill",
-                            "line": 27,
+                            "line": 33,
                             "message": ""
                         },
                         {
@@ -42,7 +90,7 @@
                             "column": 28,
                             "durationMicroseconds": 0,
                             "functionName": "workspace",
-                            "line": 32,
+                            "line": 38,
                             "message": ""
                         }
                     ],
