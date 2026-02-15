@@ -7,10 +7,18 @@
                     "entries": [
                         {
                             "codegenResult": 0,
-                            "column": 23,
+                            "column": 22,
                             "durationMicroseconds": 0,
-                            "functionName": "fill",
-                            "line": 13,
+                            "functionName": "top",
+                            "line": 9,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 35,
+                            "durationMicroseconds": 0,
+                            "functionName": "horizontalCenter",
+                            "line": 10,
                             "message": ""
                         }
                     ],

@@ -18,7 +18,7 @@
                             "column": 27,
                             "durationMicroseconds": 0,
                             "functionName": "fill",
-                            "line": 19,
+                            "line": 17,
                             "message": ""
                         },
                         {
@@ -26,7 +26,7 @@
                             "column": 35,
                             "durationMicroseconds": 0,
                             "functionName": "centerIn",
-                            "line": 22,
+                            "line": 20,
                             "message": ""
                         },
                         {
@@ -34,7 +34,7 @@
                             "column": 27,
                             "durationMicroseconds": 0,
                             "functionName": "fill",
-                            "line": 36,
+                            "line": 34,
                             "message": ""
                         },
                         {
@@ -42,39 +42,7 @@
                             "column": 35,
                             "durationMicroseconds": 0,
                             "functionName": "centerIn",
-                            "line": 39,
-                            "message": ""
-                        },
-                        {
-                            "codegenResult": 0,
-                            "column": 27,
-                            "durationMicroseconds": 0,
-                            "functionName": "fill",
-                            "line": 53,
-                            "message": ""
-                        },
-                        {
-                            "codegenResult": 0,
-                            "column": 35,
-                            "durationMicroseconds": 0,
-                            "functionName": "centerIn",
-                            "line": 56,
-                            "message": ""
-                        },
-                        {
-                            "codegenResult": 0,
-                            "column": 27,
-                            "durationMicroseconds": 0,
-                            "functionName": "fill",
-                            "line": 70,
-                            "message": ""
-                        },
-                        {
-                            "codegenResult": 0,
-                            "column": 35,
-                            "durationMicroseconds": 0,
-                            "functionName": "centerIn",
-                            "line": 73,
+                            "line": 37,
                             "message": ""
                         }
                     ],

@@ -7,9 +7,7 @@ StackView {
     initialItem: homeScreen  // Start with Home screen by default
 
     property alias home: homeScreen
-    property alias settings: settingsScreen
-    property alias profile: profileScreen
-    property alias help: helpScreen
+    property alias gpio: gpioScreen
 
     // Home Screen Component
     Component {
@@ -20,7 +18,7 @@ StackView {
 
             Label {
                 anchors.centerIn: parent
-                text: "Home Screen"
+                text: "Alpha Mini"
                 font.pixelSize: 24
                 font.bold: true
                 color: "black"
@@ -28,50 +26,16 @@ StackView {
         }
     }
 
-    // Settings Screen Component
+    // GPIO Screen Component
     Component {
-        id: settingsScreen
+        id: gpioScreen
         Rectangle {
             color: "lightgreen"
             anchors.fill: parent
 
             Label {
                 anchors.centerIn: parent
-                text: "Settings Screen"
-                font.pixelSize: 24
-                font.bold: true
-                color: "black"
-            }
-        }
-    }
-
-    // Profile Screen Component
-    Component {
-        id: profileScreen
-        Rectangle {
-            color: "lightyellow"
-            anchors.fill: parent
-
-            Label {
-                anchors.centerIn: parent
-                text: "Profile Screen"
-                font.pixelSize: 24
-                font.bold: true
-                color: "black"
-            }
-        }
-    }
-
-    // Help Screen Component
-    Component {
-        id: helpScreen
-        Rectangle {
-            color: "lightpink"
-            anchors.fill: parent
-
-            Label {
-                anchors.centerIn: parent
-                text: "Help Screen"
+                text: "GPIO Test"
                 font.pixelSize: 24
                 font.bold: true
                 color: "black"

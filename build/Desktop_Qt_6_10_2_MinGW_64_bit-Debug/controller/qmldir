@@ -3,6 +3,7 @@ typeinfo appcontroller.qmltypes
 prefer :/qt/qml/controller/
 Main 254.0 Main.qml
 Sidebar 254.0 Sidebar.qml
-Workspace 254.0 Workspace.qml
+Home 254.0 Home.qml
+Gpio 254.0 Gpio.qml
 depends QtQuick
 

@@ -21,29 +21,30 @@ ApplicationWindow {
         anchors.centerIn: parent
         width: embeddedDev ? window.height : window.width
         height: embeddedDev ? window.width : window.height
-        rotation: embeddedDev ? 90 : 0
-
+        rotation: embeddedDev ? 270 : 0
         padding: 10
         font.family: prismaFont.name
-        background: Rectangle {
-            color: "red"
+        background: Image {
+            fillMode: Image.PreserveAspectCrop
+            source: Qt.resolvedUrl("assets/BrushedMetal.jpg")
         }
 
         RowLayout {
             anchors.fill: parent
-            spacing: 10
+            spacing: 1
 
             Sidebar {
                 id: zone1
-                workspace: zone2
+                stackView: zone2
                 Layout.fillHeight: true
                 Layout.preferredWidth: 100
             }
 
-            Workspace {
+            StackView {
                 id: zone2
                 Layout.fillHeight: true
                 Layout.fillWidth: true
+                initialItem: Home {}
             }
         }
     }

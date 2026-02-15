@@ -3,38 +3,39 @@ import QtQuick.Controls.Basic
 import QtQuick.Layouts
 
 Pane {
-    property var workspace
-    background: Rectangle {
-        color: "green"
-    }
+    id: sidebar
+    property StackView stackView
+    background: null
+    padding: 0
     ColumnLayout {
-                    anchors.fill: parent
-                    anchors.margins: 10
-                    spacing: 0
+        anchors.fill: parent
+        anchors.margins: 0
+        spacing: 0
 
-                    Button {
-                        text: "Home"
-                        Layout.fillWidth: true
-                        onClicked: workspace.replace(workspace.home, StackView.Immediate)
-                    }
-                    Item { Layout.fillHeight: true }
-                    Button {
-                        text: "Settings"
-                        Layout.fillWidth: true
-                        onClicked: workspace.replace(workspace.settings, StackView.Immediate)
-                    }
-                    Item { Layout.fillHeight: true }
-                    Button {
-                        text: "Profile"
-                        Layout.fillWidth: true
-                        onClicked: workspace.replace(workspace.profile, StackView.Immediate)
-                    }
-                    Item { Layout.fillHeight: true }
-                    Button {
-                        text: "Help"
-                        Layout.fillWidth: true
-                        onClicked: workspace.replace(workspace.help, StackView.Immediate)
-                    }
-                }
+        Button {
+            text: "Home"
+            Layout.fillHeight: true
+            Layout.fillWidth: true
+            background: null
+            onClicked: stackView.replace(homeComponent, StackView.Immediate)
+        }
 
+        Button {
+            text: "GPIO"
+            Layout.fillHeight: true
+            Layout.fillWidth: true
+            background: null
+            onClicked: stackView.replace(gpioComponent, StackView.Immediate)
+        }
+    }
+    // Component definitions for lazy loading
+    Component {
+        id: homeComponent
+        Home {}
+    }
+
+    Component {
+        id: gpioComponent
+        Gpio {}
+    }
 }

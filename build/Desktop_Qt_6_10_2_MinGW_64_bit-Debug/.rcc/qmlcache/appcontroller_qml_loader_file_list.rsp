@@ -6,4 +6,5 @@ C:/Users/matthew/Documents/QT/controller/build/Desktop_Qt_6_10_2_MinGW_64_bit-De
 C:/Users/matthew/Documents/QT/controller/build/Desktop_Qt_6_10_2_MinGW_64_bit-Debug/.qt/rcc/appcontroller_raw_res_0.qrc
 /qt/qml/controller/Main.qml
 /qt/qml/controller/Sidebar.qml
-/qt/qml/controller/Workspace.qml
+/qt/qml/controller/Home.qml
+/qt/qml/controller/Gpio.qml

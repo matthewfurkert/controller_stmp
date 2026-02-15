@@ -20,8 +20,10 @@ qt_add_qml_module(appcontroller
         RESOURCES assets/BrushedMetal.jpg assets/cool.svg assets/fan_fill.svg assets/fan_off.svg assets/fan_outline.svg assets/heat.svg
         QML_FILES
         QML_FILES Sidebar.qml
-        QML_FILES Workspace.qml
+        QML_FILES
         RESOURCES fonts/Prisma.ttf fonts/RussoOne-Regular.ttf
+        QML_FILES Home.qml
+        QML_FILES Gpio.qml
 )
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.

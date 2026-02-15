@@ -74,7 +74,23 @@
                             "column": 22,
                             "durationMicroseconds": 0,
                             "functionName": "family",
-                            "line": 27,
+                            "line": 26,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 23,
+                            "durationMicroseconds": 0,
+                            "functionName": "fillMode",
+                            "line": 28,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 21,
+                            "durationMicroseconds": 0,
+                            "functionName": "source",
+                            "line": 29,
                             "message": ""
                         },
                         {
@@ -89,7 +105,7 @@
                             "codegenResult": 0,
                             "column": 28,
                             "durationMicroseconds": 0,
-                            "functionName": "workspace",
+                            "functionName": "stackView",
                             "line": 38,
                             "message": ""
                         }

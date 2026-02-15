@@ -19,7 +19,14 @@ namespace _qt_qml_controller_Sidebar_qml {
         reinterpret_cast<const QV4::CompiledData::Unit*>(&qmlData), &aotBuiltFunctions[0], nullptr
     };
 }
-namespace _qt_qml_controller_Workspace_qml { 
+namespace _qt_qml_controller_Home_qml { 
+    extern const unsigned char qmlData[];
+    extern const QQmlPrivate::AOTCompiledFunction aotBuiltFunctions[];
+    const QQmlPrivate::CachedQmlUnit unit = {
+        reinterpret_cast<const QV4::CompiledData::Unit*>(&qmlData), &aotBuiltFunctions[0], nullptr
+    };
+}
+namespace _qt_qml_controller_Gpio_qml { 
     extern const unsigned char qmlData[];
     extern const QQmlPrivate::AOTCompiledFunction aotBuiltFunctions[];
     const QQmlPrivate::CachedQmlUnit unit = {
@@ -42,7 +49,8 @@ Q_GLOBAL_STATIC(Registry, unitRegistry)
 Registry::Registry() {
     resourcePathToCachedUnit.insert(QStringLiteral("/qt/qml/controller/Main.qml"), &QmlCacheGeneratedCode::_qt_qml_controller_Main_qml::unit);
     resourcePathToCachedUnit.insert(QStringLiteral("/qt/qml/controller/Sidebar.qml"), &QmlCacheGeneratedCode::_qt_qml_controller_Sidebar_qml::unit);
-    resourcePathToCachedUnit.insert(QStringLiteral("/qt/qml/controller/Workspace.qml"), &QmlCacheGeneratedCode::_qt_qml_controller_Workspace_qml::unit);
+    resourcePathToCachedUnit.insert(QStringLiteral("/qt/qml/controller/Home.qml"), &QmlCacheGeneratedCode::_qt_qml_controller_Home_qml::unit);
+    resourcePathToCachedUnit.insert(QStringLiteral("/qt/qml/controller/Gpio.qml"), &QmlCacheGeneratedCode::_qt_qml_controller_Gpio_qml::unit);
     QQmlPrivate::RegisterQmlUnitCacheHook registration;
     registration.structVersion = 0;
     registration.lookupCachedQmlUnit = &lookupCachedUnit;

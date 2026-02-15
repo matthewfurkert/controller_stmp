@@ -6,8 +6,10 @@ set(src_and_dest_list
     "C:/Users/matthew/Documents/QT/controller/build/Desktop_Qt_6_10_2_MinGW_64_bit-Debug/controller/Main.qml"
     "C:/Users/matthew/Documents/QT/controller/Sidebar.qml"
     "C:/Users/matthew/Documents/QT/controller/build/Desktop_Qt_6_10_2_MinGW_64_bit-Debug/controller/Sidebar.qml"
-    "C:/Users/matthew/Documents/QT/controller/Workspace.qml"
-    "C:/Users/matthew/Documents/QT/controller/build/Desktop_Qt_6_10_2_MinGW_64_bit-Debug/controller/Workspace.qml"
+    "C:/Users/matthew/Documents/QT/controller/Home.qml"
+    "C:/Users/matthew/Documents/QT/controller/build/Desktop_Qt_6_10_2_MinGW_64_bit-Debug/controller/Home.qml"
+    "C:/Users/matthew/Documents/QT/controller/Gpio.qml"
+    "C:/Users/matthew/Documents/QT/controller/build/Desktop_Qt_6_10_2_MinGW_64_bit-Debug/controller/Gpio.qml"
 
 )
 set(timestamp_file "C:/Users/matthew/Documents/QT/controller/build/Desktop_Qt_6_10_2_MinGW_64_bit-Debug/.qt/appcontroller_qml.txt")

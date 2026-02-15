@@ -7,7 +7,7 @@
                     "entries": [
                         {
                             "codegenResult": 0,
-                            "column": 35,
+                            "column": 23,
                             "durationMicroseconds": 0,
                             "functionName": "fill",
                             "line": 11,
@@ -15,35 +15,19 @@
                         },
                         {
                             "codegenResult": 2,
-                            "column": 36,
-                            "durationMicroseconds": 3000,
+                            "column": 24,
+                            "durationMicroseconds": 0,
                             "functionName": "onClicked",
-                            "line": 18,
-                            "message": "Cannot access value for name workspace"
+                            "line": 20,
+                            "message": "Cannot access value for name stackView"
                         },
                         {
                             "codegenResult": 2,
-                            "column": 36,
+                            "column": 24,
                             "durationMicroseconds": 0,
                             "functionName": "onClicked",
-                            "line": 24,
-                            "message": "Cannot access value for name workspace"
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 36,
-                            "durationMicroseconds": 0,
-                            "functionName": "onClicked",
-                            "line": 30,
-                            "message": "Cannot access value for name workspace"
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 36,
-                            "durationMicroseconds": 0,
-                            "functionName": "onClicked",
-                            "line": 36,
-                            "message": "Cannot access value for name workspace"
+                            "line": 28,
+                            "message": "Cannot access value for name stackView"
                         }
                     ],
                     "filePath": "C:/Users/matthew/Documents/QT/controller/Sidebar.qml"
