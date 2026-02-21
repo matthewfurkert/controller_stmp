@@ -21,9 +21,9 @@ qt_add_qml_module(appcontroller
         QML_FILES
         QML_FILES Sidebar.qml
         QML_FILES
-        RESOURCES fonts/Prisma.ttf fonts/RussoOne-Regular.ttf
         QML_FILES Home.qml
         QML_FILES Gpio.qml
+        RESOURCES go_fonts/Go-Bold-Italic.ttf go_fonts/Go-Bold.ttf go_fonts/Go-Italic.ttf go_fonts/Go-Medium-Italic.ttf go_fonts/Go-Medium.ttf go_fonts/Go-Regular.ttf go_fonts/README
 )
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.

@@ -14,7 +14,7 @@ ApplicationWindow {
 
     FontLoader {
         id: prismaFont
-        source: Qt.resolvedUrl("fonts/Prisma.ttf")
+        source: Qt.resolvedUrl("go_fonts/Go-Regular.ttf")
     }
 
     Page {
