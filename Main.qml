@@ -4,7 +4,7 @@ import QtQuick.Layouts
 import QtQuick.Window
 
 ApplicationWindow {
-    readonly property bool embeddedDev: Qt.platform.os !== "windows" && Qt.platform.os !== "osx"
+    readonly property bool embeddedDev: Qt.platform.pluginName === "eglfs"
 
     id: window
     width: embeddedDev ? 480 : 800
