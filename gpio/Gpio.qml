@@ -1,6 +1,5 @@
 import QtQuick
 import QtQuick.Controls.Basic
-import QtQuick.Layouts
 
 Rectangle {
     color: "transparent"
@@ -13,119 +12,113 @@ Rectangle {
         font.bold: true
         color: "black"
     }
+
     Column {
-            anchors.left: parent.left
-            anchors.leftMargin: 80
-            anchors.verticalCenter: parent.verticalCenter
-            spacing: 80   // Creates even vertical spacing between the three switches
+        anchors.left: parent.left
+        anchors.leftMargin: 80
+        anchors.verticalCenter: parent.verticalCenter
+        spacing: 20
+        enabled: !switchAuto.checked
+        opacity: switchAuto.checked ? 0.4 : 1.0
 
-            // === RED SWITCH ===
-            Switch {
-                id: switchRed
-                scale: 2.1
-                text: qsTr("Red")
-                onClicked: gpioRed.toggle()
-
-                indicator: Rectangle {
-                    implicitWidth: 54
-                    implicitHeight: 30
-                    x: switchRed.leftPadding
-                    y: Math.round((parent.height - height) / 2)
-                    radius: 15
-                    color: switchRed.checked ? "#f87171" : "#e5e7eb"
-                    border.color: switchRed.checked ? "#ef4444" : "#9ca3af"
-
-                    Rectangle {  // handle
-                        x: switchRed.checked ? parent.width - width - 3 : 3
-                        y: 3
-                        width: 24
-                        height: 24
-                        radius: 12
-                        color: "white"
-                        border.color: switchRed.checked ? "#ef4444" : "#9ca3af"
-                    }
-                }
-
-                contentItem: Text {
-                    leftPadding: switchRed.indicator.width + switchRed.spacing
-                    text: switchRed.text
-                    font: switchRed.font
-                    color: "#b91c1c"
-                    verticalAlignment: Text.AlignVCenter
-                }
+        CheckBox {
+            id: checkRed
+            text: qsTr("Red")
+            onClicked: gpioRed.toggle()
+            indicator: Rectangle {
+                implicitWidth: 72; implicitHeight: 72; radius: 6
+                border.color: checkRed.checked ? "#ef4444" : "#9ca3af"
+                color: checkRed.checked ? "#f87171" : "white"
+                Text { anchors.centerIn: parent; text: "✔"; font.pixelSize: 24; color: "white"; visible: checkRed.checked }
             }
-
-
-            // === ORANGE SWITCH ===
-            Switch {
-                id: switchOrange
-                scale: 2.1
-                text: qsTr("Orange")
-                onClicked: gpioOrange.toggle()
-
-                indicator: Rectangle {
-                    implicitWidth: 54
-                    implicitHeight: 30
-                    x: switchOrange.leftPadding
-                    y: Math.round((parent.height - height) / 2)
-                    radius: 15
-                    color: switchOrange.checked ? "#fb923c" : "#e5e7eb"
-                    border.color: switchOrange.checked ? "#f97316" : "#9ca3af"
-
-                    Rectangle {  // handle
-                        x: switchOrange.checked ? parent.width - width - 3 : 3
-                        y: 3
-                        width: 24
-                        height: 24
-                        radius: 12
-                        color: "white"
-                        border.color: switchOrange.checked ? "#f97316" : "#9ca3af"
-                    }
-                }
-
-                contentItem: Text {
-                    leftPadding: switchOrange.indicator.width + switchOrange.spacing
-                    text: switchOrange.text
-                    font: switchOrange.font
-                    color: "#b45309"
-                    verticalAlignment: Text.AlignVCenter
-                }
-            }
-
-            // === GREEN SWITCH ===
-            Switch {
-                id: switchGreen
-                scale: 2.1
-                text: qsTr("Green")
-                onClicked: gpioGreen.toggle()
-
-                indicator: Rectangle {
-                    implicitWidth: 54
-                    implicitHeight: 30
-                    x: switchGreen.leftPadding
-                    y: Math.round((parent.height - height) / 2)
-                    radius: 15
-                    color: switchGreen.checked ? "#4ade80" : "#e5e7eb"
-                    border.color: switchGreen.checked ? "#22c55e" : "#9ca3af"
-
-                    Rectangle {  // handle
-                        x: switchGreen.checked ? parent.width - width - 3 : 3
-                        y: 3
-                        width: 24
-                        height: 24
-                        radius: 12
-                        color: "white"
-                        border.color: switchGreen.checked ? "#22c55e" : "#9ca3af"
-                    }
-                }
-
-                contentItem: Text {
-                    leftPadding: switchGreen.indicator.width + switchGreen.spacing
-                    text: switchGreen.text
-                    font: switchGreen.font
-                    color: "#15803d"
-                    verticalAlignment: Text.AlignVCenter
-                }
+            contentItem: Text {
+                text: checkRed.text; color: "#b91c1c"; leftPadding: 72
+                font.pixelSize: 24; verticalAlignment: Text.AlignVCenter
             }
         }
+
+        CheckBox {
+            id: checkOrange
+            text: qsTr("Orange")
+            onClicked: gpioOrange.toggle()
+            indicator: Rectangle {
+                implicitWidth: 72; implicitHeight: 72; radius: 6
+                border.color: checkOrange.checked ? "#f97316" : "#9ca3af"
+                color: checkOrange.checked ? "#fb923c" : "white"
+                Text { anchors.centerIn: parent; text: "✔"; font.pixelSize: 24; color: "white"; visible: checkOrange.checked }
+            }
+            contentItem: Text {
+                text: checkOrange.text; color: "#b45309"; leftPadding: 72
+                font.pixelSize: 24; verticalAlignment: Text.AlignVCenter
+            }
+        }
+
+        CheckBox {
+            id: checkGreen
+            text: qsTr("Green")
+            onClicked: gpioGreen.toggle()
+            indicator: Rectangle {
+                implicitWidth: 72; implicitHeight: 72; radius: 6
+                border.color: checkGreen.checked ? "#22c55e" : "#9ca3af"
+                color: checkGreen.checked ? "#4ade80" : "white"
+                Text { anchors.centerIn: parent; text: "✔"; font.pixelSize: 24; color: "white"; visible: checkGreen.checked }
+            }
+            contentItem: Text {
+                text: checkGreen.text; color: "#166534"; leftPadding: 72
+                font.pixelSize: 24; verticalAlignment: Text.AlignVCenter
+            }
+        }
+    }
+
+    Column {
+        anchors.right: parent.right
+        anchors.top: parent.top
+        width: parent.width * 0.5  // adjust width as needed
+        height: parent.height
+        spacing: 20
+
+        // Spacer to push Switch 25% down
+        Item {
+            width: parent.width
+            height: parent.height * 0.25
+        }
+
+        Switch {
+            id: switchAuto
+            text: qsTr("Manual / Auto")
+            scale: 2
+            contentItem: Text {
+                text: switchAuto.text; color: "Blue"; leftPadding: 72
+                font.pixelSize: 12; verticalAlignment: Text.AlignVCenter
+            }
+            anchors.horizontalCenter: parent.horizontalCenter
+            checked: false
+        }
+        Button {
+            id: lightShowButton
+            text: qsTr("Light\nShow")
+            anchors.horizontalCenter: parent.horizontalCenter
+            enabled: switchAuto.checked
+            opacity: switchAuto.checked ? 1.0 : 0.2
+
+            contentItem: Text {
+                text: lightShowButton.text
+                color: "#9ca3af"; font.pixelSize: 24; font.bold: true
+                horizontalAlignment: Text.AlignHCenter; verticalAlignment: Text.AlignVCenter
+            }
+
+            background: Rectangle {
+                implicitWidth: 160
+                implicitHeight: 160
+                radius: 10
+                color: lightShowButton.pressed ? "#7c3aed" : "#8b5cf6"
+
+                Behavior on color { ColorAnimation { duration: 150 } }
+            }
+
+            // onClicked: {
+            //     // light show logic
+            // }
+        }
+    }
 }
