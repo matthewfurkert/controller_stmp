@@ -11,8 +11,13 @@ int main(int argc, char *argv[])
 
     QQmlApplicationEngine engine;
 
-    Gpio::IGpioPin* gpioPin = Gpio::GpioFactory::createPin(14);
-    engine.rootContext()->setContextProperty("gpioPin", gpioPin);
+    Gpio::IGpioPin* gpioRed = Gpio::GpioFactory::createPin(4);
+    Gpio::IGpioPin* gpioOrange = Gpio::GpioFactory::createPin(6);
+    Gpio::IGpioPin* gpioGreen = Gpio::GpioFactory::createPin(3);
+    engine.rootContext()->setContextProperty("gpioRed", gpioRed);
+    engine.rootContext()->setContextProperty("gpioOrange", gpioOrange);
+    engine.rootContext()->setContextProperty("gpioGreen", gpioGreen);
+
 
     QObject::connect(
         &engine,

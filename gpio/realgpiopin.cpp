@@ -12,10 +12,10 @@ RealGpioPin::RealGpioPin(unsigned int offset, QObject* parent)
     , m_offset(offset)
 {
 #ifdef USE_REAL_GPIO
-    // Prefer explicit path for v2 compatibility (change if you need a different chip, e.g. "/dev/gpiochip4")
-    m_chip = gpiod_chip_open("/dev/gpiochip0");
+    // Prefer explicit path for v2 compatibility (change if you need a different chip, e.g. "/dev/gpiochip5")
+    m_chip = gpiod_chip_open("/dev/gpiochip5");
     if (!m_chip) {
-        qWarning() << "Failed to open /dev/gpiochip0";
+        qWarning() << "Failed to open /dev/gpiochip5";
         return;
     }
 
