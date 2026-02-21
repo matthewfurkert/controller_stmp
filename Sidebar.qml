@@ -27,6 +27,13 @@ Pane {
             background: null
             onClicked: stackView.replace(gpioComponent, StackView.Immediate)
         }
+        Button {
+            text: "CAN"
+            Layout.fillHeight: true
+            Layout.fillWidth: true
+            background: null
+            onClicked: stackView.replace(canComponent, StackView.Immediate)
+        }
     }
     // Component definitions for lazy loading
     Component {
@@ -37,5 +44,9 @@ Pane {
     Component {
         id: gpioComponent
         Gpio {}
+    }
+    Component {
+        id: canComponent
+        Can {}
     }
 }

@@ -1,5 +1,7 @@
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
+#include <QQmlContext>
+#include "gpio/gpiofactory.h"
 
 int main(int argc, char *argv[])
 {
@@ -8,6 +10,10 @@ int main(int argc, char *argv[])
     QGuiApplication app(argc, argv);
 
     QQmlApplicationEngine engine;
+
+    Gpio::IGpioPin* gpioPin = Gpio::GpioFactory::createPin(14);
+    engine.rootContext()->setContextProperty("gpioPin", gpioPin);
+
     QObject::connect(
         &engine,
         &QQmlApplicationEngine::objectCreationFailed,

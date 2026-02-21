@@ -16,26 +16,30 @@ qt_add_qml_module(appcontroller
     URI controller
     QML_FILES
         Main.qml
-        RESOURCES
-        RESOURCES assets/BrushedMetal.jpg assets/cool.svg assets/fan_fill.svg assets/fan_off.svg assets/fan_outline.svg assets/heat.svg
-        QML_FILES
         QML_FILES Sidebar.qml
-        QML_FILES
-        QML_FILES Home.qml
-        QML_FILES Gpio.qml
+        QML_FILES home/Home.qml
+        QML_FILES gpio/Gpio.qml
         RESOURCES go_fonts/Go-Bold-Italic.ttf go_fonts/Go-Bold.ttf go_fonts/Go-Italic.ttf go_fonts/Go-Medium-Italic.ttf go_fonts/Go-Medium.ttf go_fonts/Go-Regular.ttf go_fonts/README
+        RESOURCES assets/BrushedMetal.jpg assets/cool.svg assets/fan_fill.svg assets/fan_off.svg assets/fan_outline.svg assets/heat.svg
+        QML_FILES can/Can.qml
+        SOURCES gpio/gpiofactory.h gpio/gpiofactory.cpp
+        SOURCES gpio/igpiopin.h
+        SOURCES gpio/mockgpiopin.h gpio/mockgpiopin.cpp
+        SOURCES gpio/realgpiopin.h gpio/realgpiopin.cpp
 )
 
-# Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.
-# If you are developing for iOS or macOS you should consider setting an
-# explicit, fixed bundle identifier manually though.
-set_target_properties(appcontroller PROPERTIES
-#    MACOSX_BUNDLE_GUI_IDENTIFIER com.example.appcontroller
-    MACOSX_BUNDLE_BUNDLE_VERSION ${PROJECT_VERSION}
-    MACOSX_BUNDLE_SHORT_VERSION_STRING ${PROJECT_VERSION_MAJOR}.${PROJECT_VERSION_MINOR}
-    MACOSX_BUNDLE TRUE
-    WIN32_EXECUTABLE TRUE
-)
+option(USE_REAL_GPIO "Use real libgpiod (requires libgpiod-dev on target/desktop)" OFF)
+
+if(USE_REAL_GPIO)
+    find_package(PkgConfig REQUIRED)
+    pkg_check_modules(LIBGPIOD REQUIRED libgpiod)
+    target_link_libraries(appcontroller PRIVATE ${LIBGPIOD_LIBRARIES})
+    target_include_directories(appcontroller PRIVATE ${LIBGPIOD_INCLUDE_DIRS})
+    target_compile_definitions(appcontroller PRIVATE USE_REAL_GPIO)
+    message(STATUS "Building with REAL GPIO (libgpiod)")
+else()
+    message(STATUS "Building with MOCK GPIO (perfect for Windows/WSL desktop)")
+endif()
 
 target_link_libraries(appcontroller
     PRIVATE Qt6::Quick
