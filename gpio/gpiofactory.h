@@ -1,4 +1,4 @@
-// GpioFactory.h
+// gpiofactory.h
 #pragma once
 #include "igpiopin.h"
 

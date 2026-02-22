@@ -26,6 +26,7 @@ qt_add_qml_module(appcontroller
         SOURCES gpio/igpiopin.h
         SOURCES gpio/mockgpiopin.h gpio/mockgpiopin.cpp
         SOURCES gpio/realgpiopin.h gpio/realgpiopin.cpp
+        SOURCES gpio/lightshow.h gpio/lightshow.cpp
 )
 
 option(USE_REAL_GPIO "Use real libgpiod (requires libgpiod-dev on target/desktop)" OFF)
