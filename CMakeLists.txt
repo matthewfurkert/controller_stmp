@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.16)
 
-project(controller VERSION 0.1 LANGUAGES CXX)
+project(controller_stmp VERSION 0.1 LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
@@ -8,12 +8,12 @@ find_package(Qt6 REQUIRED COMPONENTS Quick)
 
 qt_standard_project_setup(REQUIRES 6.8)
 
-qt_add_executable(appcontroller
+qt_add_executable(appcontroller_stmp
     main.cpp
 )
 
-qt_add_qml_module(appcontroller
-    URI controller
+qt_add_qml_module(appcontroller_stmp
+    URI controller_stmp
     QML_FILES
         Main.qml
         QML_FILES Sidebar.qml
@@ -36,20 +36,20 @@ option(USE_REAL_GPIO "Use real libgpiod (requires libgpiod-dev on target/desktop
 if(USE_REAL_GPIO)
     find_package(PkgConfig REQUIRED)
     pkg_check_modules(LIBGPIOD REQUIRED libgpiod)
-    target_link_libraries(appcontroller PRIVATE ${LIBGPIOD_LIBRARIES})
-    target_include_directories(appcontroller PRIVATE ${LIBGPIOD_INCLUDE_DIRS})
-    target_compile_definitions(appcontroller PRIVATE USE_REAL_GPIO)
+    target_link_libraries(appcontroller_stmp PRIVATE ${LIBGPIOD_LIBRARIES})
+    target_include_directories(appcontroller_stmp PRIVATE ${LIBGPIOD_INCLUDE_DIRS})
+    target_compile_definitions(appcontroller_stmp PRIVATE USE_REAL_GPIO)
     message(STATUS "Building with REAL GPIO (libgpiod)")
 else()
     message(STATUS "Building with MOCK GPIO (perfect for Windows/WSL desktop)")
 endif()
 
-target_link_libraries(appcontroller
+target_link_libraries(appcontroller_stmp
     PRIVATE Qt6::Quick
 )
 
 include(GNUInstallDirs)
-install(TARGETS appcontroller
+install(TARGETS appcontroller_stmp
     BUNDLE DESTINATION .
     LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
     RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}

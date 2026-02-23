@@ -29,7 +29,7 @@ int main(int argc, char *argv[])
         &app,
         []() { QCoreApplication::exit(-1); },
         Qt::QueuedConnection);
-    engine.loadFromModule("controller", "Main");
+    engine.loadFromModule("controller_stmp", "Main");
 
     return app.exec();
 }
