@@ -20,13 +20,15 @@ qt_add_qml_module(appcontroller
         QML_FILES home/Home.qml
         QML_FILES gpio/Gpio.qml
         RESOURCES go_fonts/Go-Bold-Italic.ttf go_fonts/Go-Bold.ttf go_fonts/Go-Italic.ttf go_fonts/Go-Medium-Italic.ttf go_fonts/Go-Medium.ttf go_fonts/Go-Regular.ttf go_fonts/README
-        RESOURCES assets/BrushedMetal.jpg assets/cool.svg assets/fan_fill.svg assets/fan_off.svg assets/fan_outline.svg assets/heat.svg
+        RESOURCES assets/BrushedMetal.jpg
         QML_FILES can/Can.qml
         SOURCES gpio/gpiofactory.h gpio/gpiofactory.cpp
         SOURCES gpio/igpiopin.h
         SOURCES gpio/mockgpiopin.h gpio/mockgpiopin.cpp
         SOURCES gpio/realgpiopin.h gpio/realgpiopin.cpp
         SOURCES gpio/lightshow.h gpio/lightshow.cpp
+        QML_FILES i2c/I2c.qml
+        RESOURCES assets/dial_no_background.png assets/dial_original.jpg assets/dial_svg.svg
 )
 
 option(USE_REAL_GPIO "Use real libgpiod (requires libgpiod-dev on target/desktop)" OFF)

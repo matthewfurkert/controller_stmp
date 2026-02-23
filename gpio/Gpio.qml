@@ -93,8 +93,14 @@ Rectangle {
             }
             anchors.horizontalCenter: parent.horizontalCenter
             checked: false
+            onCheckedChanged: {
+                if (!checked) {
+                    lightShow.stop()
+                    lightShowButton.text = "Light Show"
+                }
+            }
         }
-        // Spacer to push Switch 20% down
+        // Spacer to push button 20% down
         Item {
             width: parent.width
             height: parent.height * 0.2

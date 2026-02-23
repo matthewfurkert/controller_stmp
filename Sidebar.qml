@@ -19,13 +19,19 @@ Pane {
             background: null
             onClicked: stackView.replace(homeComponent, StackView.Immediate)
         }
-
         Button {
             text: "GPIO"
             Layout.fillHeight: true
             Layout.fillWidth: true
             background: null
             onClicked: stackView.replace(gpioComponent, StackView.Immediate)
+        }
+        Button {
+            text: "I2C"
+            Layout.fillHeight: true
+            Layout.fillWidth: true
+            background: null
+            onClicked: stackView.replace(i2cComponent, StackView.Immediate)
         }
         Button {
             text: "CAN"
@@ -40,10 +46,13 @@ Pane {
         id: homeComponent
         Home {}
     }
-
     Component {
         id: gpioComponent
         Gpio {}
+    }
+    Component {
+        id: i2cComponent
+        I2c {}
     }
     Component {
         id: canComponent
